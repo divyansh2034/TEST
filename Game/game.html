@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Laser 0.7</title>
+	<meta name="description" content="">
+	<!-- Prevent zooming http://www.html5rocks.com/en/mobile/touch/ -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="/Game/css/style.debug.css">
+	<script src="/Game/modernizr.js"></script>
+	<script src="/Game/utils.js"></script>
+	<script src="/Game/mouse.js"></script>
+	<script src="/Game/config.js"></script>
+	<script src="/Game/levels.js"></script>
+	<script src="/Game/game.js"></script>
+	<script src="/Game/interface.js"></script>
+</head>
+<body class="loading">
+	<header class="header" id="header">
+		<nav>
+			<ul class="main-nav">
+				<li class="main-nav-item">
+					<a href="#settings" class="js-overlay"><i class="icon-cog"></i>Settings</a>
+					<div id="settings" class="menu-content about">
+<div class="setting" id="reset">Reset Progress</div>
+<label class="setting" for="reload">Enable Resize/Rotation <input type="checkbox" id="reload"></label>
+<label class="setting" for="audio">Enable Sound <input type="checkbox" id="audio"></label>
+
+					</div>
+				</li>
+				<li class="main-nav-item">
+					<a href="#levels" class="js-overlay"><i class="icon-tasks"></i>Levels</a>
+					<div id="levels" class="menu-content"></div>
+				</li>
+				<li class="main-nav-item level-title-wrapper">
+					<div class="level-title" id="title"></div>
+					<div id="solution" class="menu-content">
+						<a href="#" id="level-solution">Show solution</a>
+					</div>
+				</li>
+				<li class="main-nav-item">
+					<a href="#" class="level-nav-button js-nav-button" id="prev" title="Previous Level"><i class="icon-caret-left"></i>Previous</a>
+				</li>
+				<li class="main-nav-item">
+					<a href="#" class="level-nav-button js-nav-button" id="next"><i class="icon-caret-right" title="Next Level"></i>Next</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="main">
+		<div class="game-wrapper">
+			<div class="game" onselectstart="return false;">
+				<canvas id="game-main" height="600" width="600"></canvas>
+			</div>
+		</div>
+		<div class="victory">
+			<div>
+				<h1>Congratulations!</h1>
+				Level completed.
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
